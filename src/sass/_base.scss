@@ -24,11 +24,15 @@ body{
     margin: 0 auto;
 }
 
-/* @media screen and (min-width:1024px){
-    body{
-        background-image: url('/assets/images/bg-top.svg'), url('/assets/images/bg-bottom.svg');
+@media screen and (min-width:1024px){
+    .box-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;     
+    }
+}
+/* 
+background-image: url('/assets/images/bg-top.svg'), url('/assets/images/bg-bottom.svg');
         background-size: 300px 600px,50%;
         background-repeat: no-repeat;
-        background-position: right -150px top,bottom;
-    }
-} */
+        background-position: right -150px top,bottom; */

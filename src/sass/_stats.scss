@@ -78,7 +78,7 @@
 
     &__item{
         background-color: white;
-        padding: 1em 0;
+        padding: 1.25em 0;
         border-radius: 15px;
 
         &:nth-child(2){
@@ -90,9 +90,11 @@
 
 @media screen and (min-width:1024px){
     .grid{
-        grid-template-columns: 300px 35% 300px;
+        grid-template-columns: 350px 33.3% 350px;
         grid-template-rows: 1px auto 1px;
         justify-content: center;
+        max-width: 1080px;
+        margin: 0 auto;
 
         &__item{
             grid-row: 2/3;
