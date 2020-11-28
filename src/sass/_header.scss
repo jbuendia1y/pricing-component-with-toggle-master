@@ -1,0 +1,48 @@
+.header{
+    &__title{
+        text-align: center;
+        color: $Dark-Grayish-Blue;
+    }
+}
+
+.switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__bar{
+        margin: 0 1.5em;
+        position: relative;
+        width: 55px;
+        height: 30px;
+        border-radius: 1000px;
+        background-image: linear-gradient(to right, $Linear-Gradient);
+        opacity: 1;
+        cursor: pointer;
+
+        &:hover{
+            transition: all .7s;
+            opacity: .5;
+        }
+    }
+
+    &__circle{
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        height: 22.5px;
+        width: 22.5px;
+        border-radius: 50%;
+        background-color: $Very-Light-Grayish-Blue;
+
+        transition: all .5s;
+    }
+
+    &__text{
+        color: $Grayish-Blue;
+    }
+}
+
+.active__circle{
+    transform: translateX(-23.5px);
+}

@@ -1,0 +1,116 @@
+.stats{
+    margin: 3em 0;
+    &__title,&__price,&__text,&__button{
+        text-align: center;
+        margin: 0;
+    }
+
+    &__title{
+        font-size: 1.25em;
+        color: $Grayish-Blue;
+    }
+
+    &__price{
+        font-size: 3.5em;
+        margin-top: .25em;
+        color: $Dark-Grayish-Blue;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text{
+        margin: 1.5em 0;
+        margin-bottom: 2em;
+        &-center{
+            display: block;
+            border-top: 1px solid $Light-Grayish-Blue;
+            border-bottom: 1px solid $Light-Grayish-Blue;
+
+            padding: 1em 0;
+
+            &:nth-child(2){
+                border: none;
+            }
+        }
+    }
+
+    &__button{
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        padding-top: .85em;
+        padding-bottom: .85em;
+        border: none;
+        border-radius: 5px;
+        color: $Very-Light-Grayish-Blue;
+        background-image: linear-gradient(to right, $Linear-Gradient);
+    }
+}
+
+.box{
+    margin: 0 auto;
+    width: 85%;
+    padding: 1em 0;
+}
+
+.simbol{
+    font-size: .5em;
+}
+
+.white{
+    color: $Very-Light-Grayish-Blue;
+
+    &:nth-child(4){
+        background-image: none;
+        background-color: $Very-Light-Grayish-Blue;
+        color: hsl(237, 63%, 64%);
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.5em;
+
+    &__item{
+        background-color: white;
+        padding: 1em 0;
+        border-radius: 15px;
+
+        &:nth-child(2){
+            background-color: none;
+            background-image: linear-gradient(to right, $Linear-Gradient);
+        }
+    }
+}
+
+@media screen and (min-width:1024px){
+    .grid{
+        grid-template-columns: 300px 35% 300px;
+        grid-template-rows: 1px auto 1px;
+        justify-content: center;
+
+        &__item{
+            grid-row: 2/3;
+            position: relative;
+
+            &:nth-child(1),&:nth-child(3){z-index: 200;}
+
+            &:nth-child(1){right: -5px;}
+            &:nth-child(3){left: -5px;}
+
+            &:nth-child(2){
+                z-index: 300;
+                grid-column: 2/3;
+                grid-row: 1/4;
+
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
